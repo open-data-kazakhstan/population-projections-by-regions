@@ -39,18 +39,18 @@ We downoladed data from that source and located it in acrhive as source.xsls
 
 We have processed the source data to make it normalized and derived  several aggregated datasets from it:
 
-* archive/source.xsls - sourse data 
-* acrhive/kazpop.csv - unpivoted sourse data 
-* data/csv_final.csv - expanded main dataset which predicts populations from 2023 to 2050
-* data/rsl1.csv - final dataset expanded to 10 steps to make vizualization smoother
-* datapackge.json - conatins all of the key information about our dataset
+* `archive/source.xsls` - sourse data 
+* `acrhive/kazpop.csv` - unpivoted sourse data 
+* `data/csv_final.csv` - expanded main dataset which predicts populations from 2023 to 2050
+* `data/rsl1.csv` - final dataset expanded to 10 steps to make vizualization smoother
+* `datapackge.json` - conatins all of the key information about our dataset
 
-## Scripts overview
+## Scripts
 
-1. unpivot.py takes the Excel spreadsheet with initial population data and unpivots it to a standard CSV format for further work
-2. regression.py uses kazpop.csv from step 1, trains a model on the existing data and builds population projections for each area up to 2050
-3. wrang_data.py cleans up the data resulting from step 2 and improves some projections for areas with few initial  population values.
-4. animate.py uses matplotlib to create an infographic about populations over the years and exports it to a gif file
+* `unpivot.py` takes the Excel spreadsheet with initial population data and unpivots it to a standard CSV format for further work
+* `regression.py` uses kazpop.csv from step 1, trains a model on the existing data and builds population projections for each area up to 2050
+* `wrang_data.py` cleans up the data resulting from step 2 and improves some projections for areas with few initial  population values.
+* `animate.py` uses matplotlib to create an infographic about populations over the years and exports it to a gif file
 
 ## Visualization
 
@@ -58,3 +58,9 @@ Final result is visualized data that displays and predicts the population of Kaz
 
 
 <img src="population-animation.gif" alt="population-kazkhstan" width="450" height="800">
+
+## License
+
+This dataset is licensed under the Open Data Commons [Public Domain and Dedication License][pddl].
+
+[pddl]: https://www.opendatacommons.org/licenses/pddl/1-0/
