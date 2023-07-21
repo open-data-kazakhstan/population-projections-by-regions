@@ -33,9 +33,9 @@ python scripts/main.py
 
 ## Data 
 
-Sourse data is in xslx format and located in archive/source.xslx. Data soursed from https://stat.gov.kz/api/iblock/element/6584/file/ru/
+Sourse data is in xslx format and located in archive/source.xslx. Data sourced from https://stat.gov.kz/api/iblock/element/6584/file/ru/
 
-We downoladed data from that source and located in acrhive as source.xsls
+We downoladed data from that source and located it in acrhive as source.xsls
 
 We have processed the source data to make it normalized and derived  several aggregated datasets from it:
 
