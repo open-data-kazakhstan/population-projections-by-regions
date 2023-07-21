@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Read the initial Excel
-excel = 'Численность населения.xlsx'
+excel = 'archive/source.xlsx'
 df = pd.read_excel(excel)
 df.columns = df.columns.astype(str)
 pd.set_option('display.max_columns', None)
@@ -24,6 +24,6 @@ data_types = df_unpivot.dtypes
 print(data_types)
 
 # Export to kazpop.csv
-df_unpivot.to_csv('kazpop.csv', index=False)
+df_unpivot.to_csv('archive/kazpop.csv', index=False)
 
 

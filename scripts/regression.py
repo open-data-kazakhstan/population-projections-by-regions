@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 # Read kazpop.csv
-data = pd.read_csv('kazpop.csv')
+data = pd.read_csv('archive/kazpop.csv')
 
 # Group the data by 'Область' (area names)
 grouped_data = data.groupby('Область')
