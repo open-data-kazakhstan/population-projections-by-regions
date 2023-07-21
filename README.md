@@ -55,4 +55,6 @@ We have processed the source data to make it normalized and derived  several agg
 ## Visualization
 
 Final result is visualized data that displays and predicts the population of Kazakhstan from 2000 to 2050:
+
+
 <img src="population-animation.gif" alt="population-kazkhstan" width="450" height="800">
