@@ -53,4 +53,4 @@ combined_df = pd.concat([data, predictions_df], ignore_index=True)
 df_sorted = combined_df.sort_values(by=['Год'])
 
 # Export to csv_final.csv
-df_sorted.to_csv('csv_final.csv')
+df_sorted.to_csv('data/csv_final.csv')
