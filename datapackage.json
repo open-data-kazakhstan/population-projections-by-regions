@@ -1,0 +1,120 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "archive\\kazpop.csv",
+            "profile": "tabular-data-resource",
+            "name": "kazpop",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "\u041e\u0431\u043b\u0430\u0441\u0442\u044c",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u0413\u043e\u0434",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u041d\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u0435",
+                        "type": "integer",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        },
+        {
+            "path": "data\\csv_final.csv",
+            "profile": "tabular-data-resource",
+            "name": "csv_final",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "field1",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u041e\u0431\u043b\u0430\u0441\u0442\u044c",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u0413\u043e\u0434",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u041d\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u0435",
+                        "type": "number",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        },
+        {
+            "path": "data\\rsl1.csv",
+            "profile": "tabular-data-resource",
+            "name": "rsl1",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "field1",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u041e\u0431\u043b\u0430\u0441\u0442\u044c",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u0413\u043e\u0434",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "\u041d\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u0435",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Unnamed: 0",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "index",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ranks",
+                        "type": "integer",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
