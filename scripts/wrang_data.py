@@ -1,12 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation, PillowWriter
 import numpy as np
 
-file = 'kazpop.csv'
+file = 'archive/kazpop.csv'
 df_1 = pd.read_csv(file)
 
-file2 = 'csv_final.csv'
+file2 = 'data/csv_final.csv'
 df_2 = pd.read_csv(file2)
 df_2 = df_2.loc[df_2['Год'] > 2023]
 
@@ -94,31 +93,4 @@ df1['Население'] = df1['Население'].fillna(0).astype('int')
 df1['Год'] = df1['Год'].fillna(0).astype('int')
 plt.style.use('dark_background')
 fig, ax = plt.subplots(figsize=(15,8))
-df1.to_csv('rsl1.csv')
-
-def animate(ranks):
-    ax.clear()
-    filtered = df1.loc[df1['ranks'] == ranks]
-    filt_areas = filtered.loc[filtered['Область'] != 'Республика Казахстан '].sort_values('Население')
-    filt_areas.drop(filt_areas[filt_areas['Население'] == 0].index, inplace = True)
-    plot = plt.barh(y=filt_areas['Область'], width=filt_areas['Население'], color='#E6825D')
-
-    ax.set_xlim(0, 3_500_000)
-    ax.bar_label(plot, padding=3, labels=[f'{round(value,-3):,}' for value in filt_areas['Население']])
-
-    for edge in ['top', 'right', 'bottom', 'left']:
-        ax.spines[edge].set_visible(False)
-    x = filtered.loc[filtered['Область'] == 'Республика Казахстан ', 'Население'].item()
-    y = filtered.loc[filtered['Область'] == 'Республика Казахстан ', 'Год'].item()
-    ax.tick_params(left = False)
-    ax.get_xaxis().set_visible(False)
-    ax.set_title(f'''Популяция Казахстана на {y} год 
-{round(x,-3):,}''', size=18, weight='bold')    
-plt.rcParams['text.color'] = 'white'
-plt.rcParams['axes.labelcolor'] = 'white'
-plt.rcParams['xtick.color'] = 'white'
-plt.rcParams['ytick.color'] = 'white'
-
-animation = FuncAnimation(fig, animate, frames=range(df1['ranks'].min(), df1['ranks'].max() +1), interval = 50) # Change interval if you want to change the speed
-# animation.save('Population-Kazakhstan-by-year2.gif', dpi=500, writer=PillowWriter(fps=300)) # Script for saving
-plt.show()
+df1.to_csv('data/rsl1.csv')

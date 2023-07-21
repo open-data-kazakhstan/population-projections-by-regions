@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter
 
-file = 'rsl1.csv'
+file = 'data/rsl1.csv'
 df = pd.read_csv(file)
 print(df)
 
@@ -36,6 +36,6 @@ plt.rcParams['xtick.color'] = 'white'
 plt.rcParams['ytick.color'] = 'white'
 
 animation = FuncAnimation(fig, animate, frames=range(df['ranks'].min(), df['ranks'].max() +1), interval = 25) # Change interval if you want to change the speed
-#animation.save('testv1.gif', dpi=100, writer=PillowWriter(fps=100)) # Script for saving
+#animation.save('population_animate.gif', dpi=100, writer=PillowWriter(fps=100)) # Script for saving
 plt.show()
 
